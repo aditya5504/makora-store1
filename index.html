@@ -3,107 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Discover modern western wear, co-ord sets and feminine essentials at MAKORA.">
-<title>MAKORA — Elegance in Every Detail</title>
+<title>MAKORA | Women's Fashion</title>
+<meta name="description" content="MAKORA — modern western wear for women. A student e-commerce demo project.">
 <style>
-:root{--ink:#111;--rose:#c48f91;--blush:#f6eeee;--paper:#fff;--muted:#777;--line:#e9e3e3}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
-.announcement{background:var(--ink);color:white;text-align:center;padding:10px;font-size:10px;letter-spacing:2px;text-transform:uppercase}
-header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 5.5%;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:5}
-.logo{font-family:Georgia,serif;font-size:29px;letter-spacing:7px;font-weight:bold}.nav{display:flex;gap:28px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}.nav a:hover{color:var(--rose)}
-.header-right{font-size:11px;letter-spacing:1px}.menu{display:none;border:0;background:none;font-size:22px}
-.hero{min-height:610px;display:grid;grid-template-columns:1fr 1fr;background:var(--blush)}
-.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:9% 12%}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8d6668}
-h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(48px,6vw,82px);line-height:.98;margin:22px 0}
-.hero-copy p{font-family:Georgia,serif;color:#625858;font-size:17px;line-height:1.8;max-width:390px}
-.btn{display:inline-block;background:var(--ink);color:white;padding:17px 27px;border:1px solid var(--ink);font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:22px;transition:.2s}
-.btn:hover{background:var(--rose);border-color:var(--rose)}.hero-image{min-height:610px;background:url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=85') center/cover}
-.hero-image{background-image:url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=85')}
-.section{padding:85px 6%}.section-head{text-align:center;margin-bottom:42px}.section-head .eyebrow{color:var(--rose)}
-h2{font-family:Georgia,serif;font-size:42px;font-weight:400;margin:12px 0}.intro{color:var(--muted);font-size:13px;line-height:1.8}
-.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.category{position:relative;height:430px;overflow:hidden;background:var(--blush)}
-.category img,.product img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.category:hover img,.product:hover img{transform:scale(1.04)}
-.category-label{position:absolute;bottom:0;left:0;right:0;padding:24px;color:white;background:linear-gradient(transparent,rgba(0,0,0,.58))}
-.category-label h3{font:30px Georgia,serif;margin:0 0 8px}.category-label span{font-size:10px;letter-spacing:2px;text-transform:uppercase}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{min-width:0}.product-photo{height:350px;position:relative;overflow:hidden;background:var(--blush)}
-.tag{position:absolute;top:12px;left:12px;background:white;padding:8px 10px;font-size:9px;letter-spacing:1px;text-transform:uppercase}
-.product h3{font:18px Georgia,serif;margin:14px 0 7px}.price{font-size:12px;color:#555}.product small{display:block;color:var(--muted);margin-top:7px;font-size:10px}
-.order{border:0;background:var(--ink);color:white;padding:11px 14px;margin-top:12px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;width:100%}.order:hover{background:var(--rose)}
-.story{display:grid;grid-template-columns:1fr 1fr;background:var(--blush);min-height:470px}.story-image{background:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85') center/cover}.story-copy{padding:10%;display:flex;flex-direction:column;justify-content:center}.story-copy p{font:17px/1.9 Georgia,serif;color:#65595a}
-.newsletter{text-align:center;background:#f8f5f4;padding:75px 20px}.newsletter p{color:var(--muted);font-size:13px}.newsletter form{display:flex;max-width:440px;margin:25px auto 0}.newsletter input{flex:1;min-width:0;padding:15px;border:1px solid var(--line);font-size:12px}.newsletter button{background:var(--ink);color:white;border:0;padding:0 20px;font-size:10px;letter-spacing:1px}
-footer{background:var(--ink);color:white;padding:55px 6% 25px}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer-logo{font:30px Georgia,serif;letter-spacing:7px}.footer-copy{color:#bbb;font-size:12px;line-height:1.8;max-width:300px}.footer-col h4{font-size:10px;letter-spacing:2px;text-transform:uppercase}.footer-col a{display:block;color:#bbb;font-size:12px;margin:13px 0}.copyright{border-top:1px solid #444;margin-top:40px;padding-top:20px;color:#999;font-size:10px;letter-spacing:1px}
-.notice{font-size:11px;color:#8a696b;text-align:center;margin-top:18px}
-@media(max-width:800px){header{height:66px}.nav{display:none}.menu{display:block}.header-right{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:70px 8%}.hero-image{min-height:420px;grid-row:1}.category-grid{grid-template-columns:1fr 1fr}.category{height:320px}.products{grid-template-columns:repeat(2,1fr);gap:25px 12px}.product-photo{height:270px}.story{grid-template-columns:1fr}.story-image{min-height:380px}.footer-top{grid-template-columns:1fr 1fr}.footer-top>div:first-child{grid-column:1/-1}}
-@media(max-width:480px){.section{padding:65px 5%}.category-grid{grid-template-columns:1fr}.category{height:390px}.products{gap:22px 10px}.product-photo{height:220px}h2{font-size:34px}.hero-image{min-height:350px}.hero-copy p{font-size:15px}.footer-top{grid-template-columns:1fr 1fr}}
+:root{--ink:#151313;--paper:#fff;--rose:#c48f91;--pale:#f5e9e8;--muted:#777;--line:#e9e2e1;--serif:Georgia,serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.announcement{background:var(--ink);color:#fff;text-align:center;padding:9px;font-size:11px;letter-spacing:2px}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:10}.brand{font: bold 29px var(--serif);letter-spacing:5px}.navlinks{display:flex;gap:24px;align-items:center}.navlinks a,.navlinks button{color:var(--ink);text-decoration:none;background:none;border:0;font-size:12px;letter-spacing:1px}.navlinks button{padding:8px}.hero{min-height:470px;background:linear-gradient(90deg,rgba(0,0,0,.56),rgba(0,0,0,.05)),none;display:flex;align-items:center;padding:7%;color:#fff}
+.hero-fallback{background:linear-gradient(110deg,#332526,#c48f91 70%,#e9d7d5)}.hero-content{max-width:520px}.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase}.hero h1{font:normal clamp(42px,7vw,76px)/1.02 var(--serif);margin:18px 0}.hero p{line-height:1.7;max-width:420px}.btn{border:0;background:var(--ink);color:#fff;padding:13px 20px;letter-spacing:1px;font-size:11px;text-transform:uppercase}.btn.light{background:#fff;color:#111}.btn.rose{background:var(--rose);color:#fff}.section{padding:62px 6%}.section-head{text-align:center;margin-bottom:30px}.section-head small{letter-spacing:3px;color:var(--rose)}h2{font:normal 36px var(--serif);margin:10px 0}.toolbar{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;margin:24px 0}.toolbar input{flex:1;min-width:210px;padding:13px;border:1px solid var(--line)}.toolbar select{padding:13px;border:1px solid var(--line);background:white}.categories{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:25px 0}.chip{border:1px solid var(--line);background:#fff;padding:10px 17px;font-size:11px;letter-spacing:1px}.chip.active{background:var(--ink);color:#fff}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.product{border:1px solid var(--line);background:#fff}.product img{width:100%;height:300px;object-fit:cover;background:var(--pale)}.product-info{padding:15px}.product-info h3{font:normal 19px var(--serif);margin:0 0 8px}.meta{font-size:11px;color:var(--muted);margin-bottom:10px}.price{font-weight:bold;font-size:14px;margin:10px 0}.product-info .btn{width:100%}.story{background:var(--pale);text-align:center;padding:65px 12%;line-height:1.8}.footer{background:var(--ink);color:#fff;padding:35px 6%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}.footer a{color:#fff}.overlay{position:fixed;inset:0;background:#0008;z-index:30;display:none;align-items:center;justify-content:center;padding:16px}.modal{background:#fff;width:min(540px,100%);max-height:90vh;overflow:auto;padding:25px;position:relative}.modal h2{font-size:29px}.close{position:absolute;right:16px;top:13px;border:0;background:none;font-size:25px}.field{display:block;margin:12px 0}.field span{display:block;font-size:11px;color:var(--muted);margin-bottom:6px}.field input,.field select{width:100%;padding:12px;border:1px solid var(--line)}.cart-row,.admin-row{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);align-items:center}.qty button{border:1px solid var(--line);background:white;padding:5px 9px}.muted{color:var(--muted);font-size:12px}.notice{background:var(--pale);padding:12px;margin:12px 0;font-size:12px;line-height:1.5}.admin-panel{display:none;background:#faf7f6;padding:25px;margin:20px 0;border:1px solid var(--line)}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.admin-panel input,.admin-panel select{padding:10px;border:1px solid var(--line);width:100%;margin:5px 0 12px}.empty{text-align:center;padding:35px;color:var(--muted)}.badge{background:var(--rose);color:#fff;border-radius:20px;padding:3px 7px;font-size:10px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.product img{height:260px}}@media(max-width:600px){.nav{padding:0 4%;height:66px}.brand{font-size:22px}.navlinks{gap:7px}.navlinks a{display:none}.hero{min-height:420px;padding:8% 6%}.section{padding:45px 5%}.grid{gap:12px}.product img{height:210px}.product-info{padding:10px}.product-info h3{font-size:16px}.admin-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="announcement">A little more you, in every look · Discover the new collection</div>
-<header>
-  <button class="menu" aria-label="Menu" onclick="document.querySelector('.nav').classList.toggle('show')">☰</button>
-  <a class="logo" href="#">MAKORA</a>
-  <nav class="nav">
-    <a href="#new">New In</a><a href="#shop">Shop</a><a href="#story">Our Story</a><a href="#contact">Contact</a>
+<div class="announcement">COMPLIMENTARY SHIPPING ON DEMO ORDERS · MAKORA WOMEN</div>
+<header class="nav">
+  <div class="brand">MAKORA</div>
+  <nav class="navlinks">
+    <a href="#shop">SHOP</a><a href="#story">OUR STORY</a>
+    <button onclick="openLogin()" id="accountBtn">ACCOUNT</button>
+    <button onclick="openCart()">BAG (<span id="cartCount">0</span>)</button>
   </nav>
-  <a class="header-right" href="#shop">EXPLORE COLLECTION ↗</a>
 </header>
-<style>.nav.show{display:flex;position:absolute;top:66px;left:0;right:0;background:white;padding:22px;flex-direction:column;gap:18px;border-bottom:1px solid #eee}</style>
-
+<section class="hero hero-fallback">
+  <div class="hero-content">
+    <div class="eyebrow">The new feminine edit</div>
+    <h1>Elegance in<br>Every Detail.</h1>
+    <p>Contemporary western wear, thoughtfully styled for every version of you.</p>
+    <button class="btn light" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Explore collection</button>
+  </div>
+</section>
 <main>
-<section class="hero">
-  <div class="hero-copy">
-    <span class="eyebrow">The new feminine edit</span>
-    <h1>Your style.<br> Your statement.</h1>
-    <p>Modern silhouettes, thoughtful details and effortless pieces made to move with you.</p>
-    <div><a class="btn" href="#shop">Shop the collection</a></div>
-  </div>
-  <div class="hero-image" role="img" aria-label="Fashion editorial"></div>
-</section>
-
 <section class="section" id="shop">
-  <div class="section-head"><span class="eyebrow">Find your feeling</span><h2>Shop the edit</h2><p class="intro">Pieces for every version of you.</p></div>
-  <div class="category-grid">
-    <a class="category" href="#new"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=80" alt="Dresses"><div class="category-label"><h3>Dresses</h3><span>Explore styles ↗</span></div></a>
-    <a class="category" href="#new"><img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=900&q=80" alt="Co-ord sets"><div class="category-label"><h3>Co-ord Sets</h3><span>Explore styles ↗</span></div></a>
-    <a class="category" href="#new"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Tops"><div class="category-label"><h3>Tops</h3><span>Explore styles ↗</span></div></a>
+  <div class="section-head"><small>CURATED FOR HER</small><h2>Shop the collection</h2><p class="muted">A demo collection created for the MAKORA college project.</p></div>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search dresses, tops, co-ord sets..." oninput="renderProducts()">
+    <select id="sort" onchange="renderProducts()"><option value="featured">Sort: Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option></select>
+  </div>
+  <div class="categories">
+    <button class="chip active" onclick="setCategory('All',this)">ALL</button>
+    <button class="chip" onclick="setCategory('Dresses',this)">DRESSES</button>
+    <button class="chip" onclick="setCategory('Tops',this)">TOPS</button>
+    <button class="chip" onclick="setCategory('Co-ord Sets',this)">CO-ORD SETS</button>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</section>
+<section class="story" id="story"><small>THE MAKORA EDIT</small><h2>Style that feels like you.</h2><p>MAKORA is a concept women's fashion label celebrating confidence, simplicity and modern femininity. This sample storefront demonstrates an online shopping experience for an academic project.</p></section>
+<section class="section">
+  <div class="section-head"><small>PROJECT DEMO</small><h2>Admin workspace</h2><p class="muted">Sign in with the demo admin account to manage sample products and view demo orders.</p></div>
+  <div style="text-align:center"><button class="btn" onclick="openLogin(true)">Open admin login</button></div>
+  <div class="admin-panel" id="adminPanel">
+    <h2>Admin dashboard</h2><div class="notice">Demo-only admin panel. Data is stored in this browser and is not secure for real customer information.</div>
+    <div class="admin-grid">
+      <div><h3>Add a product</h3><label class="field"><span>Product name</span><input id="newName" placeholder="e.g. Rose Satin Dress"></label><label class="field"><span>Category</span><select id="newCategory"><option>Dresses</option><option>Tops</option><option>Co-ord Sets</option></select></label><label class="field"><span>Price (₹)</span><input id="newPrice" type="number" min="1" placeholder="1499"></label><label class="field"><span>Image URL (optional)</span><input id="newImage" placeholder="https://..."></label><button class="btn" onclick="addProduct()">Add product</button></div>
+      <div><h3>Orders <span class="badge" id="orderCount">0</span></h3><div id="adminOrders" class="muted">No demo orders yet.</div></div>
+    </div>
+    <h3>Manage products</h3><div id="adminProducts"></div><button class="btn" onclick="logout()" style="margin-top:15px">Admin logout</button>
   </div>
 </section>
-
-<section class="section" id="new" style="background:#fcfafa">
-  <div class="section-head"><span class="eyebrow">Just landed</span><h2>The latest edit</h2><p class="intro">A first look at the MAKORA wardrobe.</p></div>
-  <div class="products">
-    <article class="product"><div class="product-photo"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80" alt="The Rose Midi Dress"><span class="tag">New</span></div><h3>The Rose Midi Dress</h3><div class="price">₹1,499</div><small>Dusty Rose · S / M / L / XL</small><button class="order" onclick="order('The Rose Midi Dress','1499')">Order on WhatsApp</button></article>
-    <article class="product"><div class="product-photo"><img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=700&q=80" alt="Everyday Co-ord"><span class="tag">Bestseller</span></div><h3>Everyday Co-ord</h3><div class="price">₹1,799</div><small>Ivory · S / M / L / XL</small><button class="order" onclick="order('Everyday Co-ord','1799')">Order on WhatsApp</button></article>
-    <article class="product"><div class="product-photo"><img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&fit=crop&w=700&q=80" alt="The Essential Top"><span class="tag">New</span></div><h3>The Essential Top</h3><div class="price">₹899</div><small>Black · S / M / L / XL</small><button class="order" onclick="order('The Essential Top','899')">Order on WhatsApp</button></article>
-    <article class="product"><div class="product-photo"><img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=700&q=80" alt="Weekend Set"><span class="tag">The edit</span></div><h3>Weekend Set</h3><div class="price">₹1,599</div><small>Blush · S / M / L / XL</small><button class="order" onclick="order('Weekend Set','1599')">Order on WhatsApp</button></article>
-  </div>
-  <p class="notice">Sample products and prices — replace these with your actual collection before publishing.</p>
-</section>
-
-<section class="story" id="story">
-  <div class="story-image" role="img" aria-label="Fashion lifestyle editorial"></div>
-  <div class="story-copy"><span class="eyebrow">A point of view</span><h2>Designed for her.<br>Made to stand out.</h2><p>At MAKORA, style is personal. We believe in expressive essentials, confident silhouettes and the little details that make an outfit feel like you.</p><a class="btn" href="#shop">Discover MAKORA</a></div>
-</section>
-
-<section class="newsletter" id="contact"><span class="eyebrow">Stay in the know</span><h2>Letters from MAKORA</h2><p>New drops, styling notes and a little inspiration in your inbox.</p><form onsubmit="event.preventDefault();alert('Thanks for your interest! Connect a mailing list service to collect subscribers.');"><input type="email" placeholder="Your email address" required><button type="submit">JOIN US</button></form></section>
 </main>
-<footer>
-  <div class="footer-top">
-    <div><div class="footer-logo">MAKORA</div><p class="footer-copy">Modern feminine fashion. Effortless pieces, thoughtful details and a style that is entirely yours.</p></div>
-    <div class="footer-col"><h4>Explore</h4><a href="#shop">Shop all</a><a href="#new">New arrivals</a><a href="#story">Our story</a></div>
-    <div class="footer-col"><h4>Connect</h4><a href="https://instagram.com/" target="_blank">Instagram</a><a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a><a href="mailto:hello@makora.example">Email us</a></div>
-  </div>
-  <div class="copyright">© <span id="year"></span> MAKORA. ALL RIGHTS RESERVED.</div>
-</footer>
+<footer class="footer"><div><div class="brand">MAKORA</div><p>Elegance in Every Detail.</p></div><div><b>COLLEGE PROJECT DEMO</b><p>Women's western wear storefront</p><a href="#shop">Shop collection</a></div><div><p>© 2026 MAKORA. Academic demonstration only.</p></div></footer>
+
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
 <script>
-const WHATSAPP_NUMBER = "919997964594"; // Replace with your WhatsApp number, country code first, no + or spaces.
-function order(name,price){
-  if(WHATSAPP_NUMBER.includes("X")){alert("Please add your WhatsApp number in the website code first.");return;}
-  const message=`Hi MAKORA! I would like to order ${name} (₹${price}). Please share available sizes and ordering details.`;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank");
+const DEFAULT_PRODUCTS = [
+ {id:1,name:"Rose Drape Dress",category:"Dresses",price:1899,image:"https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80",tag:"BESTSELLER"},
+ {id:2,name:"Everyday Chic Top",category:"Tops",price:999,image:"https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&fit=crop&w=700&q=80",tag:"NEW"},
+ {id:3,name:"Blush Co-ord Set",category:"Co-ord Sets",price:2299,image:"https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80",tag:"TRENDING"},
+ {id:4,name:"Classic Evening Dress",category:"Dresses",price:2499,image:"https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=700&q=80",tag:"EDIT"},
+ {id:5,name:"Soft Rose Shirt",category:"Tops",price:1199,image:"https://images.unsplash.com/photo-1608234807905-4466023792f5?auto=format&fit=crop&w=700&q=80",tag:"NEW"},
+ {id:6,name:"Weekend Co-ord",category:"Co-ord Sets",price:1999,image:"https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=700&q=80",tag:"POPULAR"}
+];
+const get=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}};
+const save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+let products=get("makora_products",DEFAULT_PRODUCTS),cart=get("makora_cart",[]),orders=get("makora_orders",[]),user=get("makora_user",null),category="All",admin=false;
+const money=n=>"₹"+Number(n).toLocaleString("en-IN");
+function renderProducts(){
+ let q=(document.getElementById("search").value||"").toLowerCase(),sort=document.getElementById("sort").value;
+ let list=products.filter(p=>(category==="All"||p.category===category)&&(p.name+" "+p.category).toLowerCase().includes(q));
+ if(sort==="low")list.sort((a,b)=>a.price-b.price);if(sort==="high")list.sort((a,b)=>b.price-a.price);
+ document.getElementById("productGrid").innerHTML=list.length?list.map(p=>`<article class="product"><img src="${safe(p.image)}" alt="${safe(p.name)}" onerror="this.src='https://placehold.co/600x750/f5e9e8/6d5152?text=MAKORA'"><div class="product-info"><div class="meta">${safe(p.category)} · ${safe(p.tag||"MAKORA EDIT")}</div><h3>${safe(p.name)}</h3><div class="price">${money(p.price)}</div><button class="btn" onclick="addToCart(${p.id})">Add to bag</button></div></article>`).join(""):'<div class="empty" style="grid-column:1/-1">No products found. Try another search.</div>';
 }
-document.getElementById("year").textContent=new Date().getFullYear();
+function safe(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function setCategory(c,b){category=c;document.querySelectorAll(".chip").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProducts()}
+function addToCart(id){let item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,qty:1});save("makora_cart",cart);updateCart();toast("Added to your bag")}
+function updateCart(){document.getElementById("cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+function openCart(){let rows=cart.map(x=>{let p=products.find(y=>y.id===x.id);return p?`<div class="cart-row"><div><b>${safe(p.name)}</b><div class="muted">${money(p.price)} each</div><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button> ${x.qty} <button onclick="changeQty(${p.id},1)">+</button> <button onclick="removeItem(${p.id})">Remove</button></div></div><b>${money(p.price*x.qty)}</b></div>`:""}).join("");
+let total=cart.reduce((s,x)=>{let p=products.find(y=>y.id===x.id);return s+(p?p.price*x.qty:0)},0);
+show(`<h2>Your shopping bag</h2>${rows||'<div class="empty">Your bag is empty.</div>'}<div class="cart-row"><b>Total</b><b>${money(total)}</b></div><button class="btn" style="width:100%;margin-top:15px" ${!cart.length?'disabled':''} onclick="checkout()">Proceed to checkout</button>`)}
+function changeQty(id,n){let x=cart.find(y=>y.id===id);if(x)x.qty+=n;cart=cart.filter(y=>y.qty>0);save("makora_cart",cart);openCart();updateCart()}
+function removeItem(id){cart=cart.filter(x=>x.id!==id);save("makora_cart",cart);openCart();updateCart()}
+function openLogin(forAdmin=false){show(`<h2>${forAdmin?'Admin login':'Welcome to MAKORA'}</h2><p class="muted">${forAdmin?'Use the demo admin credentials below.':'Demo account login or create an account.'}</p><div class="notice">Admin demo: <b>admin@makora.demo</b> / <b>Makora123</b></div><label class="field"><span>Email</span><input id="loginEmail" type="email" placeholder="you@example.com"></label><label class="field"><span>Password</span><input id="loginPass" type="password" placeholder="Password"></label><button class="btn" style="width:100%" onclick="login(${forAdmin})">Sign in</button>${forAdmin?'':'<p class="muted">New here? <button class="chip" onclick="signupForm()">Create demo account</button></p>'}`)}
+function signupForm(){show(`<h2>Create account</h2><label class="field"><span>Name</span><input id="regName" placeholder="Your name"></label><label class="field"><span>Email</span><input id="regEmail" type="email" placeholder="you@example.com"></label><label class="field"><span>Password</span><input id="regPass" type="password" placeholder="At least 4 characters"></label><button class="btn" style="width:100%" onclick="signup()">Create account</button>`)}
+function login(forAdmin){let email=document.getElementById("loginEmail").value.trim().toLowerCase(),pass=document.getElementById("loginPass").value;if(forAdmin&&email==="admin@makora.demo"&&pass==="Makora123"){admin=true;user={name:"MAKORA Admin",email};save("makora_user",user);closeModal();showAdmin();return}let users=get("makora_users",[]),u=users.find(x=>x.email===email&&x.pass===pass);if(u){user={name:u.name,email:u.email};save("makora_user",user);closeModal();updateAccount();toast("Welcome back")}else alert("Account not found. Create a demo account first, or check the admin demo credentials.") }
+function signup(){let name=document.getElementById("regName").value.trim(),email=document.getElementById("regEmail").value.trim().toLowerCase(),pass=document.getElementById("regPass").value;if(!name||!email||pass.length<4)return alert("Enter your name, email and a password of at least 4 characters.");let users=get("makora_users",[]);if(users.some(x=>x.email===email))return alert("This demo email is already registered.");users.push({name,email,pass});save("makora_users",users);user={name,email};save("makora_user",user);closeModal();updateAccount();toast("Account created")}
+function updateAccount(){document.getElementById("accountBtn").textContent=user?user.name.split(" ")[0].toUpperCase():"ACCOUNT"}
+function checkout(){if(!user){closeModal();openLogin();alert("Please sign in or create a demo account before checkout.");return}let total=cart.reduce((s,x)=>{let p=products.find(y=>y.id===x.id);return s+(p?p.price*x.qty:0)},0);show(`<h2>Checkout</h2><p class="muted">Signed in as ${safe(user.email)}</p><div class="notice">This is a simulated college-project checkout. No payment will be collected.</div><label class="field"><span>Full name</span><input id="shipName" value="${safe(user.name)}"></label><label class="field"><span>Delivery address</span><input id="shipAddress" placeholder="Enter a demo address"></label><label class="field"><span>Payment method</span><select id="payMethod"><option>Cash on Delivery (Demo)</option><option>UPI (Demo only — no payment)</option></select></label><div class="cart-row"><b>Order total</b><b>${money(total)}</b></div><button class="btn" style="width:100%" onclick="placeOrder()">Place demo order</button>`)}
+function placeOrder(){let name=document.getElementById("shipName").value.trim(),address=document.getElementById("shipAddress").value.trim();if(!name||!address)return alert("Please enter your name and a delivery address.");let total=cart.reduce((s,x)=>{let p=products.find(y=>y.id===x.id);return s+(p?p.price*x.qty:0)},0);orders.unshift({id:"MK"+Date.now().toString().slice(-7),name,email:user.email,address,total,status:"Placed",date:new Date().toLocaleString(),items:cart.map(x=>({...x}))});save("makora_orders",orders);cart=[];save("makora_cart",cart);updateCart();show(`<h2>Thank you, ${safe(name)}!</h2><div class="notice">Your demo order has been placed successfully.</div><p>Order ID: <b>${orders[0].id}</b></p><p>Total: <b>${money(total)}</b></p><p class="muted">No real payment or shipment was created.</p><button class="btn" onclick="closeModal()">Continue shopping</button>`)}
+function show(content){document.getElementById("modalContent").innerHTML=content;document.getElementById("overlay").style.display="flex"}
+function closeModal(){document.getElementById("overlay").style.display="none"}
+function toast(msg){let t=document.createElement("div");t.textContent=msg;t.style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#171313;color:white;padding:13px 20px;z-index:50;font-size:12px";document.body.appendChild(t);setTimeout(()=>t.remove(),1800)}
+function showAdmin(){if(!admin)return;let panel=document.getElementById("adminPanel");panel.style.display="block";panel.scrollIntoView({behavior:"smooth"});renderAdmin()}
+function renderAdmin(){document.getElementById("orderCount").textContent=orders.length;document.getElementById("adminOrders").innerHTML=orders.length?orders.map(o=>`<div class="admin-row"><span><b>${o.id}</b><br>${safe(o.name)} · ${safe(o.status)}<br><small>${safe(o.email)}</small></span><b>${money(o.total)}</b></div>`).join(""):"No demo orders yet.";document.getElementById("adminProducts").innerHTML=products.map(p=>`<div class="admin-row"><span>${safe(p.name)} <small>(${safe(p.category)})</small> · ${money(p.price)}</span><button class="chip" onclick="deleteProduct(${p.id})">Delete</button></div>`).join("")}
+function addProduct(){let name=document.getElementById("newName").value.trim(),category=document.getElementById("newCategory").value,price=Number(document.getElementById("newPrice").value),image=document.getElementById("newImage").value.trim();if(!name||price<=0)return alert("Enter a product name and valid price.");products.push({id:Date.now(),name,category,price,image:image||"https://placehold.co/600x750/f5e9e8/6d5152?text=MAKORA",tag:"ADMIN ADDED"});save("makora_products",products);renderProducts();renderAdmin();toast("Product added")}
+function deleteProduct(id){if(!confirm("Delete this demo product?"))return;products=products.filter(p=>p.id!==id);cart=cart.filter(x=>x.id!==id);save("makora_products",products);save("makora_cart",cart);renderProducts();renderAdmin();updateCart()}
+function logout(){admin=false;user=null;save("makora_user",null);document.getElementById("adminPanel").style.display="none";updateAccount();toast("Logged out")}
+renderProducts();updateCart();updateAccount();
 </script>
 </body>
 </html>
